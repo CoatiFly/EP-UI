@@ -1,0 +1,77 @@
+.index_page_box{
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    .timeline_box{
+        width: 100%;
+        height: 610px;
+        background-image: url(../../../assets/img/timeline.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        .list_box{
+            .style_pos{
+                width: 160px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 150px;
+                left: 60px;
+                z-index: 1;
+                animation-name: fadeIn;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                .title{
+                    width: 58px;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-radius: 14px;
+                    background-color: #195496;
+                    color: #fff;
+                    text-align: center;
+                }
+                .detail{
+                    width: 100%;
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: #272727;
+                    margin-top: 5px;
+                }
+                .line{
+                    width: 1px;
+                    height: 200px;
+                    background-color: #bdbdbd;
+                    margin: 10px 20px;
+                }
+                .point{
+                    width: 18px;
+                    height: 18px;
+                    background-image: url(../../../assets/icon/redpoint.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    overflow: hidden;  
+                    margin-left: 10px;  
+                }
+                &.redbg{
+                    .title{
+                        background-color: #db2800;
+                    }
+                    .detail{
+                        color: #db2800;
+                    }
+                }
+            }
+        }
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}        
+    }
+}

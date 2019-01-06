@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/**
+ * Created by 「 peng.xie 」  on 2018/12/05.
+ * project by 「 ep-group 」.
+ * thanks.
+ */
+ 
+* {
+  padding: 0;
+  margin: 0; 
+}
+
+html {
+  width: 100%;
+  height: 100%; 
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Arial", "Microsoft Yahei";
+  max-width: 1440px;
+  margin: 0 auto;
+  font-size: 14px; 
+  background-color: #F5F6FA;
+}
+
+button {
+  border: none;
+  outline: none; 
+}
+
+p {
+  margin-bottom: 0px; 
+}
+
+ul, li {
+  list-style: none; 
+}
+
+input, textarea {
+  outline: none;
+  resize: none; 
+}
+
+/**
+ * pages base config
+ */
+
+#app {
+  width: 100%;
+  min-height: 100%;
+  background-color: #F5F6FA;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
