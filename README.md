@@ -1,4 +1,4 @@
-# hello-world
+# EP-UI
 
 ## Project setup
 ```
