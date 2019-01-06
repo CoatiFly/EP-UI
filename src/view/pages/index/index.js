@@ -51,7 +51,7 @@ export default {
           line: "240px",
           bottom: "190px",
           left: "350px",
-          delay: "8s",
+          delay: "9s",
           isRed: false
         },
         {
@@ -62,7 +62,7 @@ export default {
           line: "30px",
           bottom: "218px",
           left: "470px",
-          delay: "10s",
+          delay: "11s",
           isRed: true
         },
         {
@@ -73,7 +73,7 @@ export default {
           line: "210px",
           bottom: "212px",
           left: "560px",
-          delay: "12s",
+          delay: "13s",
           isRed: false
         },
         {
@@ -84,7 +84,7 @@ export default {
           line: "80px",
           bottom: "173px",
           left: "660px",
-          delay: "14s",
+          delay: "15s",
           isRed: false
         },
         {
@@ -95,7 +95,7 @@ export default {
           line: "250px",
           bottom: "150px",
           left: "760px",
-          delay: "16s",
+          delay: "17s",
           isRed: false
         },
         {
@@ -105,7 +105,7 @@ export default {
           line: "60px",
           bottom: "230px",
           left: "860px",
-          delay: "18s",
+          delay: "19s",
           isRed: true
         },
         {
@@ -115,7 +115,7 @@ export default {
           line: "60px",
           bottom: "288px",
           left: "960px",
-          delay: "20s",
+          delay: "21s",
           isRed: false
         },
         {
@@ -125,7 +125,7 @@ export default {
           line: "160px",
           bottom: "280px",
           left: "1050px",
-          delay: "22s",
+          delay: "23s",
           isRed: true
         }
       ]
