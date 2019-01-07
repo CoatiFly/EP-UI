@@ -21,7 +21,7 @@ export default {
           line: "120px",
           bottom: "153px",
           left: "120px",
-          delay: "3s",
+          delay: "4s",
           isRed: false
         },
         {
@@ -31,7 +31,7 @@ export default {
           line: "20px",
           bottom: "165px",
           left: "220px",
-          delay: "5s",
+          delay: "7s",
           isRed: false
         },
         {
@@ -41,7 +41,7 @@ export default {
           line: "100px",
           bottom: "180px",
           left: "300px",
-          delay: "7s",
+          delay: "10s",
           isRed: false
         },
         {
@@ -51,7 +51,7 @@ export default {
           line: "240px",
           bottom: "190px",
           left: "350px",
-          delay: "9s",
+          delay: "13s",
           isRed: false
         },
         {
@@ -62,7 +62,7 @@ export default {
           line: "30px",
           bottom: "218px",
           left: "470px",
-          delay: "11s",
+          delay: "16s",
           isRed: true
         },
         {
@@ -73,7 +73,7 @@ export default {
           line: "210px",
           bottom: "212px",
           left: "560px",
-          delay: "13s",
+          delay: "19s",
           isRed: false
         },
         {
@@ -84,7 +84,7 @@ export default {
           line: "80px",
           bottom: "173px",
           left: "660px",
-          delay: "15s",
+          delay: "22s",
           isRed: false
         },
         {
@@ -95,7 +95,7 @@ export default {
           line: "250px",
           bottom: "150px",
           left: "760px",
-          delay: "17s",
+          delay: "25s",
           isRed: false
         },
         {
@@ -105,7 +105,7 @@ export default {
           line: "60px",
           bottom: "230px",
           left: "860px",
-          delay: "19s",
+          delay: "28s",
           isRed: true
         },
         {
@@ -115,7 +115,7 @@ export default {
           line: "60px",
           bottom: "288px",
           left: "960px",
-          delay: "21s",
+          delay: "31s",
           isRed: false
         },
         {
@@ -125,16 +125,33 @@ export default {
           line: "160px",
           bottom: "280px",
           left: "1050px",
-          delay: "23s",
+          delay: "34s",
           isRed: true
         }
-      ]
+      ],
+      timer: null
     };
   },
+
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
+
   mounted() {
     this.init();
   },
   methods: {
-    init() {}
+    init() {
+      let data = this.listData;
+      let n = 0;
+      this.timer = setInterval(() => {
+        if (n === data.length) {
+          clearInterval(this.timer);
+        } else {
+          this.listData.splice(n, 1, Object.assign(data[n], { cur: true }));
+          n++;
+        }
+      }, 3e3);
+    }
   }
 };

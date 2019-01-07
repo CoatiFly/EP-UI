@@ -4,7 +4,7 @@
       <ul class="list_box">
         <li class="item" v-for="(item, index) in listData" :key="index">
           <!-- prettier-ignore -->
-          <div class="style_pos" :class="{ redbg: item.isRed }" :style="{ width: item.width, bottom: item.bottom, left: item.left, animationDelay: item.delay, zIndex: index+1 }">
+          <div class="style_pos" :class="{ redbg: item.isRed, current: item.cur }" :style="{ width: item.width, bottom: item.bottom, left: item.left, zIndex: index+1 }">
             <div class="text">
               <div class="title">{{ item.time }}</div>
               <div class="detail">{{ item.detail }}</div>

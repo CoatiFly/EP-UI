@@ -20,11 +20,14 @@
                 position: absolute;
                 bottom: 150px;
                 left: 60px;
-                z-index: 1;
-                animation-name: fadeIn;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-                opacity: 0;
+                visibility: hidden;
+                .text{
+                    animation-name: fadeIn;
+                    animation-duration: 1s;
+                    animation-delay: 2s;
+                    animation-fill-mode: forwards;
+                    opacity: 0;
+                }
                 .title{
                     width: 58px;
                     height: 24px;
@@ -48,6 +51,11 @@
                     height: 200px;
                     background-color: #bdbdbd;
                     margin: 10px 20px;
+                    animation-name: fadeIn;
+                    animation-duration: 1s;
+                    animation-delay: 1s;
+                    animation-fill-mode: forwards;
+                    opacity: 0;
                 }
                 .point{
                     width: 18px;
@@ -57,7 +65,11 @@
                     background-repeat: no-repeat;
                     background-position: center;
                     overflow: hidden;  
-                    margin-left: 10px;  
+                    margin-left: 10px;
+                    animation-name: fadeIn;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    opacity: 0;
                 }
                 &.redbg{
                     .title{
@@ -67,11 +79,18 @@
                         color: #db2800;
                     }
                 }
+                &.current{
+                    visibility: visible;
+                }
             }
         }
     }
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}        
+    }
+    @keyframes showFade {
+        from { visibility: hidden;}
+        to {visibility: visible;}        
     }
 }
