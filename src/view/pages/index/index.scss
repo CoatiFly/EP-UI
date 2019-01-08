@@ -53,11 +53,11 @@
                     }
                     .line{
                         width: 1px;
-                        height: 200px;
+                        height: 0px;
                         background-color: #bdbdbd;
                         margin: 10px 20px;
-                        opacity: 0;
-                        animation-name: fadeIn;
+                        visibility: hidden;
+                        animation-name: heightAuto;
                         animation-duration: 1s;
                         animation-delay: 3s * $i + 1s;
                         animation-fill-mode: forwards;
@@ -98,5 +98,15 @@
     @keyframes showFade {
         from { visibility: hidden;}
         to {visibility: visible;}        
+    }
+    @keyframes heightAuto {
+        from {
+            height: 0;
+            visibility: visible;
+        }
+        to {
+            max-height: 500;
+            visibility: visible;
+        }        
     }
 }
