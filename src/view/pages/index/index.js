@@ -11,7 +11,6 @@ export default {
           line: "200px",
           bottom: "150px",
           left: "60px",
-          delay: "1s",
           isRed: false
         },
         {
@@ -21,7 +20,6 @@ export default {
           line: "120px",
           bottom: "153px",
           left: "120px",
-          delay: "4s",
           isRed: false
         },
         {
@@ -31,7 +29,6 @@ export default {
           line: "20px",
           bottom: "165px",
           left: "220px",
-          delay: "7s",
           isRed: false
         },
         {
@@ -41,7 +38,6 @@ export default {
           line: "100px",
           bottom: "180px",
           left: "300px",
-          delay: "10s",
           isRed: false
         },
         {
@@ -51,7 +47,6 @@ export default {
           line: "240px",
           bottom: "190px",
           left: "350px",
-          delay: "13s",
           isRed: false
         },
         {
@@ -62,7 +57,6 @@ export default {
           line: "30px",
           bottom: "218px",
           left: "470px",
-          delay: "16s",
           isRed: true
         },
         {
@@ -73,7 +67,6 @@ export default {
           line: "210px",
           bottom: "212px",
           left: "560px",
-          delay: "19s",
           isRed: false
         },
         {
@@ -84,7 +77,6 @@ export default {
           line: "80px",
           bottom: "173px",
           left: "660px",
-          delay: "22s",
           isRed: false
         },
         {
@@ -95,7 +87,6 @@ export default {
           line: "250px",
           bottom: "150px",
           left: "760px",
-          delay: "25s",
           isRed: false
         },
         {
@@ -105,7 +96,6 @@ export default {
           line: "60px",
           bottom: "230px",
           left: "860px",
-          delay: "28s",
           isRed: true
         },
         {
@@ -115,7 +105,6 @@ export default {
           line: "60px",
           bottom: "288px",
           left: "960px",
-          delay: "31s",
           isRed: false
         },
         {
@@ -125,7 +114,6 @@ export default {
           line: "160px",
           bottom: "280px",
           left: "1050px",
-          delay: "34s",
           isRed: true
         }
       ],
@@ -138,7 +126,7 @@ export default {
   },
 
   mounted() {
-    this.init();
+    // this.init();
   },
   methods: {
     init() {
@@ -152,6 +140,14 @@ export default {
           n++;
         }
       }, 3e3);
+    },
+    setClass(index, item) {
+      let obj = {};
+      obj[`item-list-${index}`] = true;
+      if (item.isRed) {
+        obj.redbg = true;
+      }
+      return obj;
     }
   }
 };

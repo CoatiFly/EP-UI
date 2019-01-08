@@ -14,73 +14,79 @@
         background-position: center;
         position: relative;
         .list_box{
-            .style_pos{
-                width: 160px;
-                overflow: hidden;
-                position: absolute;
-                bottom: 150px;
-                left: 60px;
-                visibility: hidden;
-                .text{
-                    animation-name: fadeIn;
-                    animation-duration: 1s;
-                    animation-delay: 2s;
-                    animation-fill-mode: forwards;
-                    opacity: 0;
-                }
-                .title{
-                    width: 58px;
-                    height: 24px;
-                    line-height: 24px;
-                    font-size: 14px;
-                    font-weight: 600;
-                    border-radius: 14px;
-                    background-color: #195496;
-                    color: #fff;
-                    text-align: center;
-                }
-                .detail{
-                    width: 100%;
-                    line-height: 20px;
-                    font-size: 14px;
-                    color: #272727;
-                    margin-top: 5px;
-                }
-                .line{
-                    width: 1px;
-                    height: 200px;
-                    background-color: #bdbdbd;
-                    margin: 10px 20px;
-                    animation-name: fadeIn;
-                    animation-duration: 1s;
-                    animation-delay: 1s;
-                    animation-fill-mode: forwards;
-                    opacity: 0;
-                }
-                .point{
-                    width: 18px;
-                    height: 18px;
-                    background-image: url(../../../assets/icon/redpoint.png);
-                    background-size: 100%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    overflow: hidden;  
-                    margin-left: 10px;
-                    animation-name: fadeIn;
+            @for $i from 0 through 11 {
+                .item-list-#{$i} {
+                    width: 160px;
+                    overflow: hidden;
+                    position: absolute;
+                    bottom: 150px;
+                    left: 60px;
+                    visibility: hidden;
+                    animation-name: showFade;
                     animation-duration: 1s;
                     animation-fill-mode: forwards;
-                    opacity: 0;
-                }
-                &.redbg{
+                    animation-delay: 3s * $i;
+                    .text{
+                        opacity: 0;
+                        animation-name: fadeIn;
+                        animation-duration: 1s;
+                        animation-delay: 3s * $i + 2s;
+                        animation-fill-mode: forwards;
+                    }
                     .title{
-                        background-color: #db2800;
+                        width: 58px;
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        border-radius: 14px;
+                        background-color: #195496;
+                        color: #fff;
+                        text-align: center;
                     }
                     .detail{
-                        color: #db2800;
+                        width: 100%;
+                        line-height: 20px;
+                        font-size: 14px;
+                        color: #272727;
+                        margin-top: 5px;
                     }
-                }
-                &.current{
-                    visibility: visible;
+                    .line{
+                        width: 1px;
+                        height: 200px;
+                        background-color: #bdbdbd;
+                        margin: 10px 20px;
+                        opacity: 0;
+                        animation-name: fadeIn;
+                        animation-duration: 1s;
+                        animation-delay: 3s * $i + 1s;
+                        animation-fill-mode: forwards;
+                    }
+                    .point{
+                        width: 18px;
+                        height: 18px;
+                        background-image: url(../../../assets/icon/redpoint.png);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        overflow: hidden;  
+                        margin-left: 10px;
+                        opacity: 0;
+                        animation-name: fadeIn;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+                    }
+                    &.redbg{
+                        .title{
+                            background-color: #db2800;
+                        }
+                        .detail{
+                            color: #db2800;
+                        }
+                    }
+                    &.current{
+                        visibility: visible;
+                    }
                 }
             }
         }
